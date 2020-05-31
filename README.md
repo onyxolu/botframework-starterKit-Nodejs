@@ -1,50 +1,46 @@
 # botframework-starterKit-Nodejs
+
 A starter template for a Bot Framework v4.9 Nodejs bot with the up-to-date patterns and practices, Integration with LUIS and QNA Maker
 
-# Bot Starter Template for v4.5.0
-This can be used as a starter template for a .net bot with the latest patterns and practices. 
+# Bot Framework Starter Kit for NodeJs with Integration easy with LUIS and QNA Maker (Typescript)
 
-At this time, there is no NodeJS equivalent (but that would make a great pull request).
+A starter template for a Bot Framework v4.9 Nodejs bot with the up-to-date patterns and practices, Integration with LUIS and QNA Maker .
 
 There is an official template for Bot Framework v4.5.0 which you can see here: https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4
 
 The official template provides three starter options which may or may not be useful. The `Core bot` is the most comprehensive and complete.
 
-This sample is complimentary to the [official template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4) and [Bot Framework Samples](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore). Many of the patterns used in this sample are taken from common patterns seen in these official samples.
+This sample is complimentary to the [Bot Framework Samples](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/typescript_nodejs). Many of the patterns used in this sample are taken from common patterns seen in these official samples.
 
 This sample includes the following:
 
-* Bot project with v4.5.0 `Microsoft.Bot.Builder.*` NuGet packages
-* Up-to-date patterns around `StartUp.cs`, `Program.cs`, `BotController.cs`, the main `ActivityHandler` architecture and `dialog` constrctors
-* Basic dialog system with a root dialog and multiple child dialogs
-* Global state being updated and used accross `ActivityHandler` and `Dialog`s
-* Passing objects to dialogs on construction
-* Strings using RESX files
-* A placeholder (commented out) example of using Dispatch, Luis and QNAMaker
+- Bot project with v4.9.1 `Microsoft.Bot.Builder.*` Node packages (Latest as at the point of development)
+- Typechecking with Typescript for a better developemnt experience
+- Easy integration with [LUIS](https://www.luis.ai/)
+- Easy integration with [QNA Maker](https://www.qnamaker.ai/)
+- Basic dialog system with a root dialog and multiple child dialogs
+- Create Cards by just calling a function and passing a type checked data
+- Seamless integration of 8 sample cards and more coming soon
+- Easy setup of environment variables
 
-## To use
+## Libraries
 
-There are multiple ways you can use this project.
+- [botbuilder V4.9.1](https://www.npmjs.com/package/botbuilder/v/4.9.1) (includes botbuilder-ai, botbuilder-dialogs, botbuilder-azure)
+- [restify](https://www.npmjs.com/package/restify)
+- [Typescript](https://www.npmjs.com/package/typescript)
+- [dotenv](https://www.npmjs.com/package/dotenv)
 
-### Install the Visual Studio 2019 template
+## Getting Started
 
-There is a Visual Studio 2019 template based on the contents of the `src` folder in this repository.
+How to quickly get started with this project.
 
-To use the VSIX, follow these steps (steps optimized for Visual Studio 2019)
+### Install Visual Studio code
 
-1. Download `StarterBot.vsix` from [here](https://github.com/martinkearn/Bot-v4.3-Template/raw/master/vsix/StarterBot.vsix) 
-2. Install `StarterBot.vsix`
-3. Launch Visual Studio 2019
-4. `Create new project`
-5. Search for "starterbot"
-6. Select the `StarterBot` template
-7. Set a `Project name`, `Location` and `Solution name` as required and `Create`
+Download [here](https://code.visualstudio.com/)
 
-This is only compatible with Visual Studio 2019. If you have Visual Studio 2017, see the 'Clone and rename' section.
+### Install Bot Framework emulator
 
-This is the simplest way to use this template, but may not always be up-to-date because the VSIX needs to be manually built and is not automated on every commit. If you want to be sure to have the latest version, please see the 'Clone and rename' section.
-
-You can see the VSIX project itself at [/vsix/src](https://github.com/martinkearn/Bot-v4.3-Template/tree/master/vsix/src).
+Download [here](https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.9.0)
 
 ### Clone and rename
 
@@ -55,15 +51,27 @@ This approach is appropriate if you want the very latest version of the template
 Follow these steps:
 
 1. Clone this repository
-2. Rename the [/src/StarterBot.sln](https://github.com/martinkearn/Bot-v4.3-Template/blob/master/src/StarterBot.sln) solution in Visual Studio
-3. Rename the [/src/StarterBot.csproj](https://github.com/martinkearn/Bot-v4.3-Template/blob/master/src/StarterBot.csproj) project in Visual Studio
-4. Set your new namespace in the project settings
-5. Find and replace all instances of `namespace StarterBot` with your new namespace
-6. Replace all instances of `StarterBot` in the resource files (`SharedStrings.resx`, `CountryStrings.resx`, `NameAgeStrings.resx` and `RootStrings.resx` ) with your new namespace by simple re-saving the resource files
+2. Update (name and author) in package.json
+3. install dependencies
+
+```terminal
+npm install
+```
+
+4. Run the Typescript Build
+
+```command
+(Ctrl+Shift+B)
+```
+
+5. Start the Node development server
+
+```terminal
+node server
+```
 
 ## Credits
+
 This was a collaborative effort between these main contributors:
-* [Martin Kearn, Microsoft](https://github.com/martinkearn)
-* [Ibrahim Kivanc, Microsoft](https://github.com/ikivanc)
-* [Martin Simecek, Microsoft](https://github.com/msimecek)
-* [Jamie Dalton, Microsoft](https://github.com/daltskin)
+
+- [Olumide Ogundare, Microsoft Student Partner](https://github.com/onyxolu)
