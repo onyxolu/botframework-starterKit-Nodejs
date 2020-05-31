@@ -1,7 +1,3 @@
-# botframework-starterKit-Nodejs
-
-A starter template for a Bot Framework v4.9 Nodejs bot with the up-to-date patterns and practices, Integration with LUIS and QNA Maker
-
 # Bot Framework Starter Kit for NodeJs with Integration easy with LUIS and QNA Maker (Typescript)
 
 A starter template for a Bot Framework v4.9 Nodejs bot with the up-to-date patterns and practices, Integration with LUIS and QNA Maker .
