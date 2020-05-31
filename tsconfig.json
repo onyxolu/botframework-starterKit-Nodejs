@@ -1,0 +1,14 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES6",
+    "sourceMap": true,
+    "declaration": false,
+    "removeComments": true,
+    "outDir": "./dist",
+    "allowJs": true
+  },
+  // "files": ["./lib/types.ts", "./lib/bot.ts", "./lib/app.ts", "./lib/cards.ts"],
+  "include": ["lib"]
+}

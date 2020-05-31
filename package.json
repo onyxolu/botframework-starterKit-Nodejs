@@ -1,0 +1,21 @@
+{
+  "name": "testbot_ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/restify": "^8.4.2",
+    "botbuilder": "^4.9.1",
+    "botbuilder-ai": "^4.9.1",
+    "botbuilder-dialogs": "^4.9.1",
+    "botframework-config": "^4.9.1",
+    "dotenv": "^8.2.0",
+    "restify": "^8.5.1",
+    "typescript": "^3.8.3"
+  }
+}
