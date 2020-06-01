@@ -1,6 +1,6 @@
-// cards
-
 import { ActionTypes } from "botbuilder";
+
+///////////-----   Cards   ----------////////////
 
 export interface IHeroCard {
   buttons: ICardAction[];
@@ -60,6 +60,8 @@ export interface IAnimationCard {
   subtitle: string;
   image: ICardImage[];
 }
+
+//////////// ------ Others  --------////////////////
 
 export interface ICardAction {
   channelData?: any;
