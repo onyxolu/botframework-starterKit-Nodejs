@@ -9,12 +9,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const botbuilder_ai_1 = require("botbuilder-ai");
 const index_1 = require("./dialogs/index");
 class EchoBot {
     constructor(qnaMaker, luis, dialogs, conversationState) {
         this._qnaMaker = qnaMaker;
-        this._luis = luis;
         this._dialogs = dialogs;
         this._conversationState = conversationState;
         index_1.addDialogs(this._dialogs);
@@ -23,17 +21,15 @@ class EchoBot {
         return __awaiter(this, void 0, void 0, function* () {
             const dc = yield this._dialogs.createContext(context);
             yield dc.continueDialog();
-            if (context.activity.text === "help") {
-                yield dc.beginDialog("welcome");
-            }
+            yield dc.beginDialog("welcome");
             if (context.activity.type === "message") {
-                yield this._luis.recognize(context).then((res) => {
-                    const top = botbuilder_ai_1.LuisRecognizer.topIntent(res);
-                });
+                yield dc.beginDialog("welcome");
+                const qnaResults = yield this._qnaMaker.generateAnswer(context.activity.text);
+                if (qnaResults.length > 0) {
+                }
             }
             else {
                 yield context.sendActivity(`${context.activity.type} event detected`);
-                console.log("Hi");
             }
             yield this._conversationState.saveChanges(context);
         });

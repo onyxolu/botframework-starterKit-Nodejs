@@ -18,7 +18,7 @@ const botbuilder_dialogs_1 = require("botbuilder-dialogs");
 dotenv_1.config();
 const conversationState = new botbuilder_1.ConversationState(new botbuilder_1.MemoryStorage());
 const dialogs = new botbuilder_dialogs_1.DialogSet(conversationState.createProperty("dialogState"));
-let server = restify.createServer();
+const server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, () => {
     console.log("%s listening.....", server.url);
 });

@@ -10,13 +10,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const botbuilder_dialogs_1 = require("botbuilder-dialogs");
-const CarouselCards_1 = require("../cards/CarouselCards");
+const HeroCard_1 = require("../cards/HeroCard");
 const utils_1 = require("../cards/utils");
 exports.initWelcomeDialog = (dialogs) => {
     dialogs.createContext;
     dialogs.add(new botbuilder_dialogs_1.WaterfallDialog("welcome", [
         (step) => __awaiter(void 0, void 0, void 0, function* () {
-            CarouselCards_1.createCarousel(step, utils_1.carouselCardsExample);
+            HeroCard_1.createHeroCard(step, utils_1.heroCardExample);
             return yield step.endDialog();
         }),
         (step) => __awaiter(void 0, void 0, void 0, function* () {

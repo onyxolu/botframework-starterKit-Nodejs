@@ -30,14 +30,14 @@ export const initWelcomeDialog = (dialogs: DialogSet) => {
   dialogs.add(
     new WaterfallDialog("welcome", [
       async (step: WaterfallStepContext) => {
-        // createHeroCard(step, heroCardExample);
+        createHeroCard(step, heroCardExample);
         // createReceiptCard(step, receiptCardExample);
         // createSignInCard(step, signinCardExample);
         // createThumbnailCard(step, thumbnailCardExample);
         // createVideoCard(step, VideoCardExample);
         // createAudioCard(step, audioCardExample);
         // createAnimationCard(step, animationCardExample);
-        createCarousel(step, carouselCardsExample);
+        // createCarousel(step, carouselCardsExample);
         return await step.endDialog();
       },
       async (step: WaterfallStepContext) => {
