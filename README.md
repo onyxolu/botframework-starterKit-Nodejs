@@ -1,10 +1,6 @@
-# Bot Framework Starter Kit for NodeJs with Integration easy with LUIS and QNA Maker (Typescript)
+# Bot Framework Starter Kit for NodeJs with easy Integration with LUIS and QNA Maker (Typescript) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
 
 A starter template for a Bot Framework v4.9 Nodejs bot with the up-to-date patterns and practices, Integration with LUIS and QNA Maker .
-
-There is an official template for Bot Framework v4.5.0 which you can see here: https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4
-
-The official template provides three starter options which may or may not be useful. The `Core bot` is the most comprehensive and complete.
 
 This sample is complimentary to the [Bot Framework Samples](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/typescript_nodejs). Many of the patterns used in this sample are taken from common patterns seen in these official samples.
 
@@ -65,6 +61,8 @@ npm install
 ```terminal
 node server
 ```
+
+6. Connect to bot framework emulator
 
 ## Credits
 
