@@ -1,4 +1,4 @@
-# Bot Framework Starter Kit for NodeJs with easy Integration with LUIS and QNA Maker (Typescript) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
+# Bot Framework Starter Kit for NodeJs with easy Integration with LUIS and QNA Maker (Typescript) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]() [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
 A starter template for a Bot Framework v4.9 Nodejs bot with the up-to-date patterns and practices, Integration with LUIS and QNA Maker .
 
@@ -7,7 +7,7 @@ This sample is complimentary to the [Bot Framework Samples](https://github.com/m
 This sample includes the following:
 
 - Bot project with v4.9.1 `Microsoft.Bot.Builder.*` Node packages (Latest as at the point of development)
-- Typechecking with Typescript for a better developemnt experience
+- Typechecking with Typescript for a better development experience
 - Easy integration with [LUIS](https://www.luis.ai/)
 - Easy integration with [QNA Maker](https://www.qnamaker.ai/)
 - Basic dialog system with a root dialog and multiple child dialogs
