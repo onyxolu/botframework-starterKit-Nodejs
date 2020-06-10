@@ -6,11 +6,11 @@ import {
   DialogSet,
 } from "botbuilder-dialogs";
 
-export const initHelpDialog = (dialogs: DialogSet) => {
+export const initPromptDialog = (dialogs: DialogSet) => {
   dialogs.add(
-    new WaterfallDialog("help", [
+    new WaterfallDialog("prompt", [
       async (step: WaterfallStepContext) => {
-        const choices = ["djdghjgj", "djdghjfhjgfhjf", "dhjfhgdjgfgfh"];
+        const choices = ["Option 1", "Option 2", "Option 3"];
         const options: PromptOptions = {
           prompt: "what will you like to know?",
           choices: choices,
@@ -20,7 +20,7 @@ export const initHelpDialog = (dialogs: DialogSet) => {
       async (step: WaterfallStepContext) => {
         switch (step.result.index) {
           case 0:
-            await step.context.sendActivity("first option");
+            await step.context.sendActivity("First option");
             break;
           case 1:
             await step.context.sendActivity("second option");
