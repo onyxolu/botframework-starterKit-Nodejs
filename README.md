@@ -34,15 +34,15 @@ Download [here](https://code.visualstudio.com/)
 
 Download [here](https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.9.0)
 
-### Clone and rename
+### Fork and rename
 
-You can clone this repository and adapt to suit your needs.
+You can Fork this repository and adapt to suit your needs.
 
 This approach is appropriate if you want the very latest version of the template or simply want to explore the code without creating a new project.
 
 Follow these steps:
 
-1. Clone this repository
+1. Fork this repository
 2. Update (name and author) in package.json
 3. install dependencies
 
