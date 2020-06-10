@@ -1,11 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const botbuilder_dialogs_1 = require("botbuilder-dialogs");
-const help_1 = require("./help");
-const welcome_1 = require("./welcome");
+const card_1 = require("./templates/card");
+const prompt_1 = require("./templates/prompt");
+const welcome_1 = require("./templates/welcome");
 exports.addDialogs = (dialogs) => {
-    help_1.initHelpDialog(dialogs);
     welcome_1.initWelcomeDialog(dialogs);
+    card_1.initCardsDialog(dialogs);
+    prompt_1.initPromptDialog(dialogs);
     dialogs.add(new botbuilder_dialogs_1.ChoicePrompt("choicePrompt"));
 };
 //# sourceMappingURL=index.js.map

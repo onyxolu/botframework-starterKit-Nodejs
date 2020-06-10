@@ -27,20 +27,20 @@ export class EchoBot {
 
     if (context.activity.type === "message") {
       //qna maker
-      const qnaResults = await this._qnaMaker.generateAnswer(
-        context.activity.text
-      );
-      if (qnaResults.length > 0) {
-        // context.sendActivity(qnaResults[0].answer)
-      }
-
-      //luis
+      // const qnaResults = await this._qnaMaker.generateAnswer(
+      //   context.activity.text
+      // );
+      // if (qnaResults.length > 0) {
+      //   // context.sendActivity(qnaResults[0].answer)
+      // }
+      // luis;
       // await this._luis.recognize(context).then((res) => {
       //   const top = LuisRecognizer.topIntent(res);
-      //   // context.sendActivity(`The top intent was ${top}`);
+      //   context.sendActivity(`The top intent was ${top}`);
       // });
+      // await dc.beginDialog("welcome");
     } else {
-      await context.sendActivity(`${context.activity.type} event detected`);
+      await dc.beginDialog("welcome");
     }
     await this._conversationState.saveChanges(context);
   }

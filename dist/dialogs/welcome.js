@@ -10,18 +10,34 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const botbuilder_dialogs_1 = require("botbuilder-dialogs");
-const HeroCard_1 = require("../cards/HeroCard");
-const utils_1 = require("../cards/utils");
 exports.initWelcomeDialog = (dialogs) => {
     dialogs.createContext;
     dialogs.add(new botbuilder_dialogs_1.WaterfallDialog("welcome", [
         (step) => __awaiter(void 0, void 0, void 0, function* () {
-            HeroCard_1.createHeroCard(step, utils_1.heroCardExample);
-            return yield step.endDialog();
+            const choices = ["Quick Order", "Enquiry", "Feedback on bot", "Quit"];
+            const options = {
+                prompt: "Welcome to Abigail King Cakes, Select an Option:",
+                choices: choices,
+            };
+            return yield step.prompt("choicePrompt", options);
         }),
         (step) => __awaiter(void 0, void 0, void 0, function* () {
-            {
-                console.log(step.result);
+            console.log(step);
+            switch (step.result.index) {
+                case 0:
+                    yield step.beginDialog("quickOrder");
+                    break;
+                case 1:
+                    yield step.beginDialog("enquiry");
+                    break;
+                case 2:
+                    yield step.beginDialog("feedback");
+                    break;
+                case 3:
+                    yield step.endDialog();
+                    break;
+                default:
+                    break;
             }
             return yield step.endDialog();
         }),

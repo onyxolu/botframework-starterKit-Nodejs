@@ -1,15 +1,11 @@
-import {
-  WaterfallDialog,
-  WaterfallStepContext,
-  PromptOptions,
-  ChoicePrompt,
-  DialogSet,
-} from "botbuilder-dialogs";
-import { initHelpDialog } from "./help";
-import { initWelcomeDialog } from "./welcome";
+import { ChoicePrompt, DialogSet } from "botbuilder-dialogs";
+import { initCardsDialog } from "./templates/card";
+import { initPromptDialog } from "./templates/prompt";
+import { initWelcomeDialog } from "./templates/welcome";
 
 export const addDialogs = (dialogs: DialogSet): void => {
-  initHelpDialog(dialogs);
   initWelcomeDialog(dialogs);
+  initCardsDialog(dialogs);
+  initPromptDialog(dialogs);
   dialogs.add(new ChoicePrompt("choicePrompt"));
 };
