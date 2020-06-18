@@ -1,7 +1,7 @@
 import { ChoicePrompt, DialogSet } from "botbuilder-dialogs";
-import { initCardsDialog } from "./templates/card";
-import { initPromptDialog } from "./templates/prompt";
-import { initWelcomeDialog } from "./templates/welcome";
+import { initCardsDialog } from "../modules/dialogs/templates/card";
+import { initPromptDialog } from "../modules/dialogs/templates/prompt";
+import { initWelcomeDialog } from "../modules/dialogs/templates/welcome";
 
 export const addDialogs = (dialogs: DialogSet): void => {
   initWelcomeDialog(dialogs);
