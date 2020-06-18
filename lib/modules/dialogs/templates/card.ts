@@ -14,7 +14,7 @@ import {
   receiptCardExample,
   thumbnailCardExample,
 } from "../../cards/utils";
-import { createAnimationCard } from "../../cards/AnimationCard";
+import { createAnimationCard } from "../../cards/allCards/AnimationCard";
 import { createAudioCard } from "../../cards/AudioCard";
 import { createSignInCard } from "../../cards/SigninCard";
 import { createReceiptCard } from "../../cards/ReceiptCard";
