@@ -9,8 +9,8 @@ export const initWelcomeDialog = (dialogs: DialogSet) => {
   dialogs.add(
     new WaterfallDialog("welcome", [
       async (step: WaterfallStepContext) => {
-        step.context.sendActivity(`Hello World`);
-        return await step.endDialog();
+        await step.context.sendActivity(`Hello World`);
+        return await step.endDialog()
       },
       async (step: WaterfallStepContext) => {
         return await step.endDialog();
