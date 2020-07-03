@@ -1,6 +1,6 @@
 import { MessageFactory, Activity, CardFactory, Attachment } from "botbuilder";
 import { WaterfallStepContext } from "botbuilder-dialogs";
-import { IAudioCard } from "../types";
+import { IAudioCard } from "../../../types";
 
 const AudioCard = (data: IAudioCard) => {
   const { title, buttons, subtitle, text, image, url } = data;

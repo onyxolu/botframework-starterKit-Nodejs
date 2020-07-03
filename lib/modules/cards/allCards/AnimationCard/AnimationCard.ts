@@ -1,6 +1,6 @@
 import { MessageFactory, Activity, CardFactory, Attachment } from "botbuilder";
 import { WaterfallStepContext } from "botbuilder-dialogs";
-import { IAnimationCard } from "../types";
+import { IAnimationCard } from "../../../types";
 
 const AnimationCard = (data: IAnimationCard) => {
   const { title, subtitle, image } = data;
