@@ -5,7 +5,7 @@ import {
   ChoicePrompt,
   DialogSet,
 } from "botbuilder-dialogs";
-import { createCarousel } from "../../cards/CarouselCards";
+import { createCarousel } from "../../cards/allCards/CarouselCard/CarouselCards";
 import {
   carouselCardsExample,
   animationCardExample,
@@ -14,11 +14,11 @@ import {
   receiptCardExample,
   thumbnailCardExample,
 } from "../../cards/utils";
-import { createAnimationCard } from "../../cards/allCards/AnimationCard";
-import { createAudioCard } from "../../cards/AudioCard";
-import { createSignInCard } from "../../cards/SigninCard";
-import { createReceiptCard } from "../../cards/ReceiptCard";
-import { createThumbnailCard } from "../../cards/ThumbnailCard";
+import { createAnimationCard } from "../../cards/allCards/AnimationCard/AnimationCard";
+import { createAudioCard } from "../../cards/allCards/AudioCard/AudioCard";
+import { createSignInCard } from "../../cards/allCards/SigninCard/SigninCard";
+import { createReceiptCard } from "../../cards/allCards/ReceiptCard/ReceiptCard";
+import { createThumbnailCard } from "../../cards/allCards/ThumbnailCard/ThumbnailCard";
 
 export const initCardsDialog = (dialogs: DialogSet) => {
   dialogs.createContext;
